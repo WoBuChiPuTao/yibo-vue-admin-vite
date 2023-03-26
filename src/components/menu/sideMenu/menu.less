@@ -1,0 +1,132 @@
+@import '@/style/var/color.less';
+
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+  user-select: none;
+}
+
+.menu-list {
+  font-size: 14px;
+  color: rgb(164 164 164);
+
+  .menu-children {
+    background-color: var(--sider-children-bg-color);
+  }
+
+  &-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 14px 24px;
+    padding-left: 16px;
+    width: 100%;
+    white-space: nowrap;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    &-selected {
+      color: #fff;
+      background-color: @primary-color !important;
+
+      &-collapsed {
+        background-color: #00061a !important;
+      }
+
+      &-collapsed::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        content: '';
+        background-color: #0960bd;
+      }
+    }
+
+    &-iconfont {
+      display: inline-flex;
+      font-size: 16px;
+      font-family: iconfont, sans-serif !important;
+      text-align: center;
+      font-style: normal;
+      text-transform: none;
+    }
+
+    &-name {
+      overflow: hidden;
+      margin-left: 0.5rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &-submenu {
+    &-title {
+      position: relative;
+      z-index: 1;
+      overflow: hidden;
+      padding: 14px 24px;
+      white-space: nowrap;
+      //text-overflow: ellipsis;
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &-iconfont {
+        display: inline-flex;
+        font-size: 16px;
+        font-family: iconfont, sans-serif !important;
+        text-align: center;
+        font-style: normal;
+        text-transform: none;
+        vertical-align: -0.125em;
+        text-rendering: optimizelegibility;
+      }
+
+      &-name {
+        overflow: hidden;
+        margin-left: 8px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        transition: all 0.3s;
+      }
+    }
+
+    &-child-active > &-title {
+      color: #fff;
+    }
+
+    &-child-active-collapsed > &-title {
+      background-color: #00061a;
+
+      ::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        content: '';
+        background-color: #0960bd;
+      }
+    }
+
+    .submenu-open-icon {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      transform: translateY(-50%);
+      transition: 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    &-opend > * > .submenu-open-icon {
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+}

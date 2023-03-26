@@ -1,0 +1,62 @@
+.multiple-tabs {
+  height: 40px;
+
+  .el-tabs {
+    --el-tabs-header-height: 40px;
+
+    vertical-align: middle;
+
+    &__content {
+      padding: 0;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .el-tabs__header {
+    margin: 0;
+    border-bottom: 1px solid var(--header-border-color);
+
+    .el-tabs__nav-wrap {
+      height: 100%;
+
+      .el-tabs__nav-scroll {
+        height: 100%;
+
+        .el-tabs__nav {
+          display: flex;
+          align-items: center;
+          // 重置边框样式
+          height: 100%;
+          border: 0;
+
+          // border-right: 1px solid var(--header-border-color);
+
+          .el-tabs__item {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px;
+            margin: 3px 6px;
+            height: 28px;
+            background-color: var(--el-color-info-light-9);
+            border: 1px solid var(--header-border-color);
+            border-radius: 4px;
+
+            &.is-active {
+              background-color: var(--el-color-primary-light-9);
+              border-color: var(--el-color-primary-light-8);
+            }
+
+            .el-tabs__item__content {
+              line-height: 24px;
+            }
+
+            .is-icon-close {
+              transform: translateY(8%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

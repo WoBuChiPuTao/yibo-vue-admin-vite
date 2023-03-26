@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# pnpm run lint # 这条注释掉不用了，因为我们要用lint-staged，只检测暂存区的代码
+npm run lint-staged

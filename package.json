@@ -1,0 +1,118 @@
+{
+  "name": "yibo-vue-admin",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vue-tsc && cross-env NODE_ENV=production vite build",
+    "format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
+    "lint-staged": "lint-staged",
+    "lint:style": "stylelint \"./**/*.{css,less,vue,html}\" --fix",
+    "log": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "prepare": "husky install",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.10",
+    "@vueuse/core": "^9.6.0",
+    "ant-design-vue": "^3.2.15",
+    "axios": "^1.1.3",
+    "core-js": "^3.8.3",
+    "dayjs": "^1.11.7",
+    "echarts": "^5.4.1",
+    "element-plus": "^2.2.25",
+    "lodash-es": "^4.17.21",
+    "mockjs": "^1.1.0",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.23",
+    "qs": "^6.11.0",
+    "sortablejs": "^1.15.0",
+    "vue": "^3.2.47",
+    "vue-i18n": "^9.1.9",
+    "vue-router": "^4.0.14"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.5.0",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@iconify-icons/eva": "^1.2.6",
+    "@iconify-icons/ic": "^1.2.13",
+    "@iconify-icons/ion": "^1.2.7",
+    "@iconify-icons/logos": "^1.2.23",
+    "@iconify-icons/material-symbols": "^1.2.32",
+    "@iconify-icons/mdi": "^1.2.44",
+    "@iconify-icons/ph": "^1.2.4",
+    "@iconify-icons/ri": "^1.2.4",
+    "@iconify/json": "^2.2.36",
+    "@iconify/vue": "^4.1.0",
+    "@types/fs-extra": "^11.0.1",
+    "@types/lodash-es": "^4.17.7",
+    "@types/mockjs": "^1.0.7",
+    "@types/nprogress": "^0.2.0",
+    "@types/qs": "^6.9.7",
+    "@types/sortablejs": "^1.15.0",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "autoprefixer": "^10.4.14",
+    "conventional-changelog-cli": "^2.2.2",
+    "cross-env": "^7.0.3",
+    "cz-git": "^1.6.1",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-vue": "^9.10.0",
+    "fs-extra": "^11.1.1",
+    "husky": "^8.0.3",
+    "less": "^4.1.3",
+    "postcss": "^8.4.21",
+    "postcss-html": "^1.5.0",
+    "postcss-import": "^15.1.0",
+    "postcss-less": "^6.0.0",
+    "prettier": "^2.8.7",
+    "stylelint": "^14.7.0",
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recommended": "^7.0.0",
+    "stylelint-config-recommended-vue": "^1.4.0",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-order": "^6.0.3",
+    "tailwindcss": "^3.2.7",
+    "typescript": "^4.9.5",
+    "unplugin-auto-import": "^0.15.2",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.2.0",
+    "vite-plugin-html": "^3.2.0",
+    "vue-tsc": "^1.2.0"
+  },
+  "license": "MIT",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "{!(package)*.json,*.code-snippets,.!(browserslist)*rc}": [
+      "prettier --write--parser json"
+    ],
+    "package.json": [
+      "prettier --write"
+    ],
+    "*.vue": [
+      "eslint --fix",
+      "prettier --write",
+      "stylelint --fix"
+    ],
+    "*.{scss,less,styl,html}": [
+      "stylelint --fix --allow-empty-input",
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+@import '/src/style/var/index.less';
+
+.header {
+  z-index: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  margin-left: 0;
+  height: @header-height;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--header-border-color);
+
+  &-left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 0 1rem;
+      height: @header-height;
+      font-size: 1.2rem;
+      line-height: @header-height;
+
+      &:hover {
+        background-color: var(--header-bg-hover-color);
+      }
+    }
+  }
+
+  &-menu {
+    min-width: 0;
+  }
+
+  &-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 180px;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 0 1rem;
+      height: @header-height;
+      font-size: 1.2rem;
+
+      &.notice-i :deep(i) {
+        height: @header-height;
+      }
+
+      &.locale-picker-span {
+        :deep(.picker-content) {
+          height: @header-height;
+        }
+      }
+
+      &:hover {
+        background-color: var(--header-bg-hover-color);
+      }
+    }
+  }
+}

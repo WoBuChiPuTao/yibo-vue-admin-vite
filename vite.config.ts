@@ -34,7 +34,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         }
       ]
     },
-    envDir: pathResolve('env/'),
+    envDir: pathResolve('env'),
     plugins: createViteplugins(env, isBuild),
     css: {
       preprocessorOptions: {

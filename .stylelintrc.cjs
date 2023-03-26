@@ -44,7 +44,9 @@ module.exports = {
         ignorePseudoClasses: ['deep']
       }
     ],
-    'selector-class-pattern': null
+    'selector-class-pattern': null,
+    'declaration-colon-newline-after': null,
+    'string-quotes': 'single'
     // 指定样式的排序
     // 'order/properties-order': [
     //   'position',

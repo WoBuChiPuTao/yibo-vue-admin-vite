@@ -1,7 +1,10 @@
 <template>
   <div class="color-list">
     <template v-for="item in props.colorList" :key="item">
-      <div class="color-list-item" :style="{ backgroundColor: item }"></div>
+      <div
+        :class="['color-list-item',{'color-list-item-active':item === actived}]"
+        :style="{ backgroundColor: item }"
+      ></div>
     </template>
   </div>
 </template>
@@ -29,6 +32,11 @@ const props = defineProps({
     height: 1.5rem;
     width: 1.5rem;
     margin: 0.5rem 0.5rem;
+    border: 1px solid #c6c6c6;
+
+    &-active{
+      border-color: #000fe3;
+    }
   }
 }
 </style>
